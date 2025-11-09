@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+// === Color Palette ===
+$navy: #00183e;
+$gold: #bba478;
+$white: #ffffff;
+
+$text: #0e1320;
+$muted: #60697b;
+$line: rgba(0, 24, 62, 0.14);
+$shadow: 0 14px 42px rgba(0, 0, 0, 0.08);
+
+$font-body: "Montserrat", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+  Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+
+// === MAIN WRAPPER ===
+.wahaj {
+  min-height: 100svh;
+  background: linear-gradient(180deg, #d7dbe2 0%, #cfd4db 100%);
+  display: grid;
+  place-items: start center;
+  padding: clamp(20px, 4vw, 56px) 20px 40px;
+  font-family: $font-body;
+  color: $text;
+}
+
+.wahaj__shell {
+  width: 100%;
+  max-width: 1120px;
+}
+
+// === PROFILE CARD ===
+.wahaj__card {
+  background: linear-gradient(180deg, #111a2c 0%, #0b1120 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.4);
+  padding: clamp(20px, 4vw, 40px);
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+  text-align: center;
+  color: #f2f3f5;
+}
+
+// === HEADSHOT WITH GLOW BACKDROP ===
+.wahaj__media {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 28px; // increased for better shoulder framing
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(187, 164, 120, 0.25) 0%,
+    #0b1120 85%
+  );
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.wahaj__media img {
+  width: min(210px, 36vw);
+  border-radius: 50%;
+  z-index: 2;
+  object-fit: contain;
+  object-position: center top;
+  transform: translateY(10px); // move image down slightly
+}
+
+.wahaj__header {
+  text-align: center;
+}
+
+.wahaj__name {
+  font-size: clamp(32px, 5vw, 48px);
+  margin: 0;
+  font-weight: 800;
+  color: #ffffff;
+
+  .wahaj__cred-inline {
+    display: inline-block;
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: 400;
+    color: #d4d8e0;
+    margin-left: 8px;
+  }
+}
+
+.wahaj__role {
+  margin-top: 6px;
+  font-weight: 900;
+  color: $gold;
+}
+
+.wahaj__cred {
+  margin-top: 6px;
+  color: #d4d8e0;
+  font-weight: 500;
+  font-size: clamp(13px, 2vw, 15px);
+  text-align: center;
+}
+
+.wahaj__intro {
+  max-width: 75ch;
+  font-size: clamp(15px, 2.4vw, 17px);
+  line-height: 1.7;
+  color: #d8dce3;
+}
+
+// === CONTACT INFO ===
+.wahaj__contact {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.contact-title {
+  font-size: clamp(16px, 2.4vw, 18px);
+  font-weight: 800;
+  color: $gold;
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.contact-top {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 12px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #f8f9fb;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+
+  &:hover {
+    border-color: $gold;
+    background: rgba(255, 255, 255, 0.08);
+    color: $gold;
+  }
+}
+
+.contact-countries {
+  display: grid;
+  gap: 12px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.country-card {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 14px;
+  color: #e5e8ed;
+}
+
+.country-title {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 800;
+  color: $gold;
+  text-transform: uppercase;
+}
+
+// === ABOUT ME ===
+.wahaj__aboutme {
+  margin-top: 20px;
+  width: 100%;
+
+  .aboutme-title {
+    font-size: clamp(16px, 2.4vw, 18px);
+    font-weight: 800;
+    color: $gold;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .aboutme-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #d4d8e0;
+    max-width: 75ch;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+// === SOCIAL BUTTONS ===
+.wahaj__links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 22px 0 26px;
+}
+
+.wahaj__link--primary-dark {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: rgba(187, 164, 120, 0.85);
+  border: 1px solid rgba(187, 164, 120, 0.6);
+  color: $navy;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+
+  .icon {
+    font-size: 18px;
+  }
+
+  &:hover {
+    background: $navy;
+    border-color: $navy;
+    color: $gold;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  }
+}
+
+// === FEATURED BRAND (SGR) ===
+.wahaj__featured {
+  margin: 6px 0 22px;
+}
+
+.brand {
+  background: #f8f9fb;
+  border: 1px solid $line;
+  border-radius: 16px;
+  padding: 20px 16px 16px;
+  display: grid;
+  justify-items: center;
+  row-gap: 10px;
+  min-height: 190px;
+  box-shadow: $shadow;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: rgba(0, 24, 62, 0.28);
+    box-shadow: 0 18px 36px rgba(0, 24, 62, 0.12);
+  }
+}
+
+.brand--featured {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.brand__border {
+  height: 4px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  background: linear-gradient(
+    90deg,
+    rgba(187, 164, 120, 0.15),
+    $gold,
+    rgba(187, 164, 120, 0.15)
+  );
+  margin-top: -6px;
+}
+
+.brand__logo img {
+  max-height: 64px;
+  max-width: 170px;
+}
+
+.brand__label {
+  font-size: 15px;
+  font-weight: 800;
+  color: $navy;
+  text-align: center;
+}
+
+.brand__links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.brand__btn {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  border: 1px solid $navy;
+  color: $navy;
+  transition: all 0.18s ease;
+
+  &:hover {
+    background: $navy;
+    color: $white;
+  }
+}
+
+.brand__socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+  justify-content: center;
+}
+
+.brand__social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: $navy;
+  color: $white;
+  font-size: 14px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: $gold;
+    color: $navy;
+    transform: translateY(-2px);
+  }
+}
+
+// === SGH NETWORK BRANDS ===
+.wahaj__brands {
+  margin: 28px 0 12px;
+}
+
+.wahaj__brands-title {
+  text-align: center;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: $navy;
+}
+
+.wahaj__brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+// === FOOTER ===
+.wahaj__footer {
+  margin-top: 20px;
+  text-align: center;
+  color: $muted;
+  font-size: 13px;
+}
+
+/* === HEADSHOT WITH GLOW BACKDROP (better framing) === */
+.wahaj__media {
+  /* Tweak these 3 custom props if you want */
+  --avatar-diameter: clamp(280px, 36vw, 420px); /* circle size */
+  --avatar-scale: 0.80;   /* 0.70–0.90 shows more/less shoulders */
+  --avatar-shift-y: 10px; /* positive = move down, negative = move up */
+
+  width: var(--avatar-diameter);
+  height: var(--avatar-diameter);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+
+  /* Subtle gold-to-navy halo */
+  background: radial-gradient(circle at 50% 45%, rgba(187,164,120,0.25) 0%, #0b1120 85%);
+  box-shadow: 0 18px 44px rgba(0,0,0,0.45);
+}
+
+.wahaj__media img {
+  width: calc(var(--avatar-diameter) * var(--avatar-scale));
+  height: auto;
+  border-radius: 50%;
+  object-fit: contain;         /* never crop */
+  object-position: center top; /* keep face high */
+  transform: translateY(var(--avatar-shift-y));
+}
+
+/* Make sure on small screens we still see shoulders */
+@media (max-width: 480px) {
+  .wahaj__media {
+    --avatar-diameter: clamp(240px, 70vw, 320px);
+    --avatar-scale: 0.78;
+    --avatar-shift-y: 8px;
+  }
+}
