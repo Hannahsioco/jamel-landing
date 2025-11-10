@@ -1,4 +1,4 @@
-import headshotImg from "../assets/marilyn.png";
+import headshotImg from "../assets/jamel.png"; // ← replace with Jamel’s headshot file name
 import logoSBB from "../assets/logos/sbb.png";
 import logoSGRWhite from "../assets/logos/scan-global-realty-whitebg.png";
 import logoAccounting from "../assets/logos/scan-accounting.png";
@@ -7,25 +7,26 @@ import logoSGS from "../assets/logos/scan-global-solutions.png";
 
 const agentData = {
   profile: {
-    name: "Marilyn Miller",
+    name: "Jamel Cooper",
     credentials: "",
     role: "Senior Property Consultant",
     headshot: headshotImg,
     intro:
-      "Marilyn Miller brings dedication and real-world expertise to every client relationship — combining NYPD-honed communication and negotiation skills with deep knowledge of New York’s neighborhoods.",
+      "Jamel Cooper is a dedicated Senior Property Consultant with Scan Global Realty, specializing in guiding New York–based investors toward profitable Dubai real estate opportunities.",
     aboutMe:
-      "After a distinguished career with the New York City Police Department, Marilyn transitioned her commitment to public service into real estate. With 25 years of community-focused experience, she navigates each transaction with clarity, ethics, and a keen eye for detail. Marilyn’s background sharpened her ability to assess situations quickly, communicate clearly, and negotiate effectively — ensuring a smooth, successful process for buyers and sellers alike. From patrolling the streets to guiding clients through complex market decisions, she’s not just selling properties — she’s helping build stronger communities, one successful closing at a time.",
+      "With years of experience helping clients navigate high-value investments, Jamel brings a results-driven, client-first approach to international property advising. His focus is on bridging opportunities between New York and Dubai — providing tailored guidance, transparent communication, and expert insights to help clients maximize their returns while investing with confidence. Jamel believes in creating meaningful, long-term relationships with every client and ensuring every transaction aligns with their goals for growth and global expansion.",
   },
 
   contact: {
-    email: "marilyn@scanglobal-ny.com",
+    email: "Jamel@scanglobal-ny.com",
     website: "https://www.scanglobal-ny.com",
     locations: [
       {
         label: "New York",
-        phoneDisplay: "+1 347-803-7478",
-        phoneHref: "tel:+13478037478",
-        address: "3 World Trade Center, 175 Greenwich Street, New York, NY 10007",
+        phoneDisplay: "+1 (646) 833-5488",
+        phoneHref: "tel:+16468335488",
+        address:
+          "3 World Trade Center, 175 Greenwich Street, New York, NY 10007",
       },
       {
         label: "Canada",
@@ -39,13 +40,8 @@ const agentData = {
   socials: [
     {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/marilyn-miller-28589626/",
+      href: "https://www.linkedin.com/in/jamel-cooper-91b080234/",
       icon: "linkedin",
-    },
-    {
-      label: "Instagram",
-      href: "https://www.instagram.com/marilynmiller3313/",
-      icon: "instagram",
     },
   ],
 
@@ -54,13 +50,19 @@ const agentData = {
     logo: logoSGRWhite,
     links: [
       { label: "Canada", href: "https://www.scanglobalrealty.ca" },
-      { label: "UAE", href: "https://scanglobal.me/" },
+      { label: "USA", href: "https://www.scanglobal-ny.com" },
     ],
     socials: [
       { href: "https://www.facebook.com/ScanGlobalRealty", icon: "facebook" },
-      { href: "https://www.linkedin.com/company/scanglobalrealty/", icon: "linkedin" },
+      {
+        href: "https://www.linkedin.com/company/scanglobalrealty/",
+        icon: "linkedin",
+      },
       { href: "https://www.instagram.com/scanglobalrealty/", icon: "instagram" },
-      { href: "https://www.youtube.com/@SCANGLOBALREALTY/shorts", icon: "youtube" },
+      {
+        href: "https://www.youtube.com/@SCANGLOBALREALTY/shorts",
+        icon: "youtube",
+      },
     ],
   },
 
@@ -74,7 +76,10 @@ const agentData = {
       ],
       socials: [
         { href: "https://www.facebook.com/ScanGlobalHoldings/", icon: "facebook" },
-        { href: "https://www.instagram.com/scanglobalholdings/", icon: "instagram" },
+        {
+          href: "https://www.instagram.com/scanglobalholdings/",
+          icon: "instagram",
+        },
         { href: "https://www.linkedin.com/company/scanglobal/", icon: "linkedin" },
       ],
     },
@@ -86,9 +91,15 @@ const agentData = {
         { label: "UAE", href: "https://scanglobal.me/solutions" },
       ],
       socials: [
-        { href: "https://www.facebook.com/profile.php?id=61557089122979", icon: "facebook" },
+        {
+          href: "https://www.facebook.com/profile.php?id=61557089122979",
+          icon: "facebook",
+        },
         { href: "https://www.linkedin.com/company/sgscanada", icon: "linkedin" },
-        { href: "https://www.instagram.com/scanglobalsolutions/", icon: "instagram" },
+        {
+          href: "https://www.instagram.com/scanglobalsolutions/",
+          icon: "instagram",
+        },
       ],
     },
     {
@@ -96,7 +107,10 @@ const agentData = {
       logo: logoAccounting,
       links: [{ label: "Canada", href: "https://www.scanaccounting.ca" }],
       socials: [
-        { href: "https://www.facebook.com/profile.php?id=100090193176649", icon: "facebook" },
+        {
+          href: "https://www.facebook.com/profile.php?id=100090193176649",
+          icon: "facebook",
+        },
         { href: "https://www.instagram.com/scanaccounting/", icon: "instagram" },
       ],
     },
@@ -105,7 +119,10 @@ const agentData = {
       logo: logoSBB,
       links: [{ label: "Visit", href: "#" }],
       socials: [
-        { href: "https://www.linkedin.com/company/scan-business-brokerage/", icon: "linkedin" },
+        {
+          href: "https://www.linkedin.com/company/scan-business-brokerage/",
+          icon: "linkedin",
+        },
       ],
     },
   ],

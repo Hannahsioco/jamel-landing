@@ -49,7 +49,7 @@ $font-body: "Montserrat", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 28px; // increased for better shoulder framing
+  padding: 20px;
   border-radius: 50%;
   background: radial-gradient(
     circle at center,
@@ -60,12 +60,9 @@ $font-body: "Montserrat", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
 }
 
 .wahaj__media img {
-  width: min(210px, 36vw);
+  width: min(220px, 38vw);
   border-radius: 50%;
   z-index: 2;
-  object-fit: contain;
-  object-position: center top;
-  transform: translateY(10px); // move image down slightly
 }
 
 .wahaj__header {
@@ -365,40 +362,4 @@ $font-body: "Montserrat", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
   text-align: center;
   color: $muted;
   font-size: 13px;
-}
-
-/* === HEADSHOT WITH GLOW BACKDROP (better framing) === */
-.wahaj__media {
-  /* Tweak these 3 custom props if you want */
-  --avatar-diameter: clamp(280px, 36vw, 420px); /* circle size */
-  --avatar-scale: 0.80;   /* 0.70–0.90 shows more/less shoulders */
-  --avatar-shift-y: 10px; /* positive = move down, negative = move up */
-
-  width: var(--avatar-diameter);
-  height: var(--avatar-diameter);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-
-  /* Subtle gold-to-navy halo */
-  background: radial-gradient(circle at 50% 45%, rgba(187,164,120,0.25) 0%, #0b1120 85%);
-  box-shadow: 0 18px 44px rgba(0,0,0,0.45);
-}
-
-.wahaj__media img {
-  width: calc(var(--avatar-diameter) * var(--avatar-scale));
-  height: auto;
-  border-radius: 50%;
-  object-fit: contain;         /* never crop */
-  object-position: center top; /* keep face high */
-  transform: translateY(var(--avatar-shift-y));
-}
-
-/* Make sure on small screens we still see shoulders */
-@media (max-width: 480px) {
-  .wahaj__media {
-    --avatar-diameter: clamp(240px, 70vw, 320px);
-    --avatar-scale: 0.78;
-    --avatar-shift-y: 8px;
-  }
 }
